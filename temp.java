@@ -8,7 +8,7 @@ public class temp {
         Scanner sc=new Scanner(System.in);
         
         System.out.println("hdsgchjvfdjhcgdhcbnfbv");
-        int a=sc.nextInt();
+        int a=sc.nextInt();1
         if(a==1)
         {
             System.out.print("\033[H\033[2J");  
