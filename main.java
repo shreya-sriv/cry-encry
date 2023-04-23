@@ -194,7 +194,7 @@ public static void main(String args[])
                 System.out.println("Enter your text below : \n");
                 str=abc.nextLine();
                 // System.out.println(f);
-                abc.close();
+                // abc.close();
                 ans=encrypt(str);
             }
             else if(a==2)
@@ -217,7 +217,8 @@ public static void main(String args[])
             }
             System.out.println("\n_________________________________________________________________\n\n"+ ans+ "\n\n" );
             System.out.println("THIS IS YOUR ENCRYPTED TEXT \n\n Choose an option from below : \n \t1. Manually copy this text. \n \t2. Save this text to a file. \n\n");
-            a=sc.nextInt();
+            Scanner abc=new Scanner(System.in);
+            a=abc.nextInt();
             if(a==1)
             {
                 System.out.println("The text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "+(char)24+"\n\n\t");
@@ -227,7 +228,7 @@ public static void main(String args[])
             {
                 save(ans);
             }
-
+            // abc.close();
 
         }
         else if(a==2)
