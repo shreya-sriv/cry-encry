@@ -176,6 +176,7 @@ public static void main(String args[])
         System.out.println(" 3. Exit \n\n\n\t");
         
         a=sc.nextInt();
+        sc.nextLine();
         System.out.print("\033[H\033[2J");  
         // System.out.flush();  
         if(a==1)
@@ -191,7 +192,7 @@ public static void main(String args[])
             
             if(a==1)
             {
-                Scanner abc=new Scanner(System.in);
+                // Scanner abc=new Scanner(System.in);
                 
                 System.out.println("Enter your text below : \n");
                 str=sc.nextLine();
@@ -219,12 +220,13 @@ public static void main(String args[])
             }
             System.out.println("\n_________________________________________________________________\n\n"+ ans+ "\n\n" );
             System.out.println("THIS IS YOUR ENCRYPTED TEXT \n\n Choose an option from below : \n \t1. Manually copy this text. \n \t2. Save this text to a file. \n\n");
-            Scanner abc=new Scanner(System.in);
-            a=abc.nextInt();
+            // Scanner abc=new Scanner(System.in);
+            a=sc.nextInt();
+            sc.nextLine();
             if(a==1)
             {
                 System.out.println("The text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "+(char)24+"\n\n\t");
-
+                sc.nextLine();
             }
             else if (a==2)
             {
@@ -238,6 +240,7 @@ public static void main(String args[])
             System.out.println("Choose from one of the options below : \n\n\n");
             System.out.println("1. Paste the text here and decrypt it.\n2. Decrypt the text saved to a file .\n\n\t");
             a=sc.nextInt();
+            sc.nextLine();
             if(a==1)
             {
                 System.out.println("\nPaste your text below "+(char)25+"\n\n\t");
@@ -246,10 +249,11 @@ public static void main(String args[])
                 System.out.print("\nDecrypted text is below "+(char)25+"\n\n\t"+decrypt(str));
                 System.out.print("\n\nTHIS IS YOUR DECRYPTED TEXT \n Choose an option from below : \n \t1. Manually copy this text. \n \t2. Save this text to a file. \n\n");
                 a=sc.nextInt();
+                sc.nextLine();
                 if(a==1)
                 {
                     System.out.print("The text is succesfully saved in a variable named \"backup\" which is printed above, you can note it down "+(char)24+"\n\n\t");
-
+                    sc.nextLine();
                 }
                 else if(a==2)
                 {
@@ -262,6 +266,7 @@ public static void main(String args[])
                 System.out.println("\nDecrypted text is below "+(char)25+"\n\n\t"+ans); 
                 System.out.println("\n\nTHIS IS YOUR DECRYPTED TEXT \n Choose an option from below : \n \t1. Manually copy this text. \n \t2. Save this text to a file. \n\n");
                 a=sc.nextInt();
+                sc.nextLine();
                 if(a==1)
                 {
                     backup=ans;
