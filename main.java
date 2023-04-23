@@ -27,7 +27,7 @@ public static String decrypt(String backup)
        pass++;
 
     }
-    ans2[len]='\0';
+    // ans2[len]='\0';
     return new String(ans2);
 
 }
@@ -37,14 +37,14 @@ public static String decryptv2()
     String f;
     System.out.println("Enter the name(with extension) of file you want to open.\n\n\t");
     f=sc.nextLine();
-    sc.close();
+    // sc.close();
     File newfile=new File(f);
     try{
         Scanner sc1=new Scanner(newfile);
         while(sc1.hasNextLine())
         {
             String line=sc1.nextLine();
-            sc1.close();
+            // sc1.close();
            return decrypt(line);
             //*********************************/
             
@@ -80,7 +80,7 @@ public static void save(String backup)
 
     }
 System.out.println("The text is succesfully saved in a file named \""+f+"\""+(char)24+"\n\n\t");
-sc.close();
+// sc.close();
 
 }
 public static void save2(String backup)
@@ -101,7 +101,7 @@ public static void save2(String backup)
 
 }
 System.out.println("The text is succesfully saved in a file named \""+f+"\""+(char)24+"\n\n\t");
-sc.close();
+// sc.close();
 }
 public static String encrypt(String str)
 {
@@ -145,7 +145,7 @@ public static void encryptv2()
             //*********************************/
             
         }
-        sc.close();
+        // sc.close();
     }
     catch(Exception e){
             System.out.println("unable to read");
@@ -174,6 +174,7 @@ public static void main(String args[])
         System.out.println(" 1. Encryption of a text \n");
         System.out.println(" 2. Decryption of a text \n");
         System.out.println(" 3. Exit \n\n\n\t");
+        
         a=sc.nextInt();
         System.out.print("\033[H\033[2J");  
         // System.out.flush();  
@@ -184,6 +185,7 @@ public static void main(String args[])
             System.out.println(" 2. Choose a .txt or .dat (binary) file by giving its name and extension \n\n\n \t");
 
             a=sc.nextInt(); 
+            sc.nextLine();
             System.out.print("\033[H\033[2J");  
             // System.out.flush(); 
             
@@ -192,7 +194,7 @@ public static void main(String args[])
                 Scanner abc=new Scanner(System.in);
                 
                 System.out.println("Enter your text below : \n");
-                str=abc.nextLine();
+                str=sc.nextLine();
                 // System.out.println(f);
                 // abc.close();
                 ans=encrypt(str);
